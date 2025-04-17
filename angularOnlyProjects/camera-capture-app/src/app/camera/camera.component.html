@@ -1,0 +1,22 @@
+<div class="controls">
+  <button (click)="openCamera()" class="control-button">Start Camera</button>
+</div>
+
+<div *ngIf="capturedImages.length" class="gallery">
+  <h3>Your Captures ({{ capturedImages.length }})</h3>
+  <div class="image-grid">
+    <div *ngFor="let image of capturedImages; let i = index" class="image-card">
+      <div class="image-container">
+        <img [src]="image.image" alt="Captured photo" class="thumbnail" />
+        <button (click)="deleteImage(i)" class="delete-button">X</button>
+      </div>
+      <div class="image-info">
+        <p><strong>Time:</strong> {{ formatDate(image.timestamp) }}</p>
+        <p><strong>Latitude:</strong> {{ formatCoordinate(image.location.lat) }}</p>
+        <p><strong>Longitude:</strong> {{ formatCoordinate(image.location.lng) }}</p>
+        <p><strong>Address:</strong> {{ image.address }}</p>
+        <p><strong>Chainage:</strong> {{ formatCoordinate(image.chainage/1000) }} km</p>
+      </div>
+    </div>
+  </div>
+</div>

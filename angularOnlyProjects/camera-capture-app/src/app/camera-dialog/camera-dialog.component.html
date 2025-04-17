@@ -1,0 +1,8 @@
+<div class="camera-dialog">
+  <video #videoElement autoplay playsinline class="camera-preview"></video>
+  <canvas #canvasElement class="hidden"></canvas>
+  <div class="dialog-buttons">
+    <button (click)="capture()" class="capture-button">Capture</button>
+    <button (click)="cancel()" class="cancel-button">Cancel</button>
+  </div>
+</div>
