@@ -16,12 +16,11 @@ interface CapturedImage {
 }
 
 @Component({
-  selector: 'app-camera',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './camera.component.html',
-  styleUrl: './camera.component.scss',
-  providers: [DecimalPipe]
+    selector: 'app-camera',
+    imports: [CommonModule],
+    templateUrl: './camera.component.html',
+    styleUrl: './camera.component.scss',
+    providers: [DecimalPipe]
 })
 export class CameraComponent {
   capturedImages: CapturedImage[] = [];

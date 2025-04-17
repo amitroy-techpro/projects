@@ -3,12 +3,11 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { cameraDialogAnimation } from './camera-dialog-animation';
 
 @Component({
-  selector: 'app-camera-dialog',
-  standalone: true,
-  imports: [],
-  templateUrl: './camera-dialog.component.html',
-  styleUrl: './camera-dialog.component.scss',
-  animations: [cameraDialogAnimation]
+    selector: 'app-camera-dialog',
+    imports: [],
+    templateUrl: './camera-dialog.component.html',
+    styleUrl: './camera-dialog.component.scss',
+    animations: [cameraDialogAnimation]
 })
 export class CameraDialogComponent {
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
